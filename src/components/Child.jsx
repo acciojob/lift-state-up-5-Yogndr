@@ -15,6 +15,7 @@ const Child = ({ onLogin }) => {
 
   return (
     <>
+      <form>
       <label htmlFor="name">Username:</label>
       <input 
         type="text" 
@@ -32,6 +33,7 @@ const Child = ({ onLogin }) => {
       />
       <br />
       <button onClick={handleLogin}>Login</button>
+        </form>
     </>
   );
 };
