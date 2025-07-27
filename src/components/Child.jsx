@@ -4,11 +4,11 @@ const Child = ({ onLogin }) => {
   return (
     <>
       {/* <h1>Parent Component</h1> */}
-      <label htmlFor="name">Username:</label>
-      <input type="text" id="name" />
+      {/* <label htmlFor="name">Username:</label> */}
+      Username: <input type="text" id="name" />
       {/* <br /> */}
-      <label htmlFor="pass">Password:</label>
-      <input type="password" id="pass" />
+      {/* <label htmlFor="pass">Password:</label> */}
+      Password: <input type="password" id="pass" />
       {/* <br /> */}
       <button onClick={()=>onLogin()}>Login</button>
     </>
