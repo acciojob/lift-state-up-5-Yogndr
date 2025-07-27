@@ -1,12 +1,13 @@
 
 import React, { useState } from "react";
 import './../styles/App.css';
-import Child from "./Child";
+import Child from "./child";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => {
+    // console.log("login")
     setIsLoggedIn(true);
   };
 
