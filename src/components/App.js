@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import './../styles/App.css';
-import Child from "./child";
+import Child from "./Child";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <div>
-    <h1>Parent Component<h1/>
+      <h1>Parent Component</h1>
       {isLoggedIn ? (
         <p>You are logged in!</p>
       ) : (
