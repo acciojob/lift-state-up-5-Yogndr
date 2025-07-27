@@ -1,16 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Child = ({ onLogin }) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    // Basic validation
+    if (username && password) {
+      onLogin(); // Call onLogin only if validation passes
+    } else {
+      alert("Please enter both username and password.");
+    }
+  };
+
   return (
     <>
-      {/* <h1>Parent Component</h1> */}
-      {/* <label htmlFor="name">Username:</label> */}
-      Username: <input type="text" id="name" />
-      {/* <br /> */}
-      {/* <label htmlFor="pass">Password:</label> */}
-      Password: <input type="password" id="pass" />
-      {/* <br /> */}
-      <button onClick={()=>onLogin()}>Login</button>
+      <label htmlFor="name">Username:</label>
+      <input 
+        type="text" 
+        id="name" 
+        value={username} 
+        onChange={(e) => setUsername(e.target.value)} 
+      />
+      <br />
+      <label htmlFor="pass">Password:</label>
+      <input 
+        type="password" 
+        id="pass" 
+        value={password} 
+        onChange={(e) => setPassword(e.target.value)} 
+      />
+      <br />
+      <button onClick={handleLogin}>Login</button>
     </>
   );
 };
